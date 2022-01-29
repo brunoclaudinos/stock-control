@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -24,5 +21,8 @@ public class Produto {
     @Column(nullable = false)
     private String descricao;
 
+    @ManyToOne
+    @JoinColumn(name = "id_unidade", nullable = false)
+    private Unidade unidade;
 
 }

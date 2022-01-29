@@ -24,7 +24,7 @@ public class Unidade {
     @Column(nullable = false)
     private String descricao;
 
-    @Column(nullable = false, length = 3)
+    @Column(nullable = false, length = 3, unique = true)
     private String abreviatura;
 
 }

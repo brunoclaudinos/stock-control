@@ -7,8 +7,7 @@ CREATE TABLE unidade (
 
 CREATE SEQUENCE seq_produto;
 CREATE TABLE produto (
-    id          BIGINT PRIMARY KEY,
-    codigo      VARCHAR(10) NOT NULL,
+    codigo      BIGINT PRIMARY KEY,
     descricao   VARCHAR(255) NOT NULL,
     id_unidade  BIGINT NOT NULL REFERENCES unidade
 );

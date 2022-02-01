@@ -36,7 +36,7 @@ public class DefaultController<E, ID extends Serializable, S extends DefaultServ
     }
 
     @PostMapping
-    public ResponseEntity<E> save(@RequestBody E Produto) {
-        return ResponseEntity.ok(service.save(Produto));
+    public ResponseEntity<E> save(@RequestBody E entity) {
+        return ResponseEntity.ok(service.save(entity));
     }
 }
